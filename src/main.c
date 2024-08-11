@@ -21,10 +21,6 @@ int main ()
 		i++;
 	}
 
-	// Intentionally dereference a reserved memory location
-	// which results in Synchronous Exception
-	*((unsigned int *)0x7FFFFFFF) = 0xDEADBEEF;
-
 	return 0;
 }
 
