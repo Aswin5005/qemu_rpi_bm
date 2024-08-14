@@ -7,6 +7,12 @@ SECTIONS
 	.data : { *(.data) }
 	. = ALIGN(0x8);
 	bss_begin = .;
-	.bss : { *(.bss*) } 
+	.bss : { *(.bss*) }
 	bss_end = .;
+	. = ALIGN(4096);
+	page_table_l0 = .;
+	. = ALIGN(4096);
+	page_table_l1 = .;
+	. = ALIGN(4096);
+	page_table_l2 = .;
 }
